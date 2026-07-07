@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miracle Chimeremeze Nmegwa — Development Economist</title>
+<meta name="description" content="Development Economist &amp; Analyst — PPP evaluation, investment research, and spatial econometrics on regional inequality in Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EAEBE1;
+    --card:#F4F3EA;
+    --ink:#1E2B22;
+    --ink-soft:#455247;
+    --gold:#B8863B;
+    --rust:#A8462F;
+    --sage:#8C9484;
+    --line: rgba(30,43,34,0.14);
+    --maxw: 780px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold);}
+  a:hover{color:var(--rust);}
+  ::selection{background:var(--gold); color:var(--card);}
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:96px 0 64px;
+    position:relative;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 22px;
+  }
+  h1.name{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(2.2rem, 5.6vw, 3.6rem);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+    margin:0 0 22px;
+    color:var(--ink);
+  }
+  .tagline{
+    font-size:1.18rem;
+    color:var(--ink-soft);
+    max-width:56ch;
+    margin:0 0 8px;
+  }
+  .role-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13.5px;
+    color:var(--ink-soft);
+    margin:18px 0 36px;
+    border-left:2px solid var(--gold);
+    padding-left:14px;
+  }
+  .cta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:56px;
+  }
+  .btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.02em;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:2px;
+    border:1px solid var(--ink);
+    color:var(--ink);
+    transition:background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .btn:hover{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .btn.primary{
+    background:var(--ink);
+    color:var(--paper);
+    border-color:var(--ink);
+  }
+  .btn.primary:hover{
+    background:var(--rust);
+    border-color:var(--rust);
+    color:var(--card);
+  }
+
+  /* ---------- GRID SIGNATURE ---------- */
+  .grid-signature{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(0,1fr));
+    grid-auto-flow:column;
+    gap:5px;
+    width:100%;
+    height:78px;
+    margin-bottom:14px;
+  }
+  .grid-signature .cell{
+    border-radius:1px;
+    opacity:0;
+    transform:translateY(6px);
+    animation:cellIn 0.5s ease forwards;
+  }
+  @keyframes cellIn{
+    to{opacity:var(--target-op,1); transform:translateY(0);}
+  }
+  .grid-caption{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--sage);
+    letter-spacing:0.02em;
+  }
+  .grid-caption b{color:var(--ink-soft); font-weight:500;}
+
+  /* ---------- SECTIONS ---------- */
+  section{
+    padding:52px 0;
+    border-top:1px solid var(--line);
+  }
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    margin-bottom:28px;
+  }
+  .sec-code{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--gold);
+    white-space:nowrap;
+  }
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.55rem;
+    margin:0;
+    color:var(--ink);
+  }
+  p{margin:0 0 16px;}
+  .lede{color:var(--ink-soft); max-width:64ch;}
+
+  /* ---------- EXPERIENCE ---------- */
+  .role{
+    margin-bottom:30px;
+  }
+  .role:last-child{margin-bottom:0;}
+  .role-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .role-title{
+    font-weight:600;
+    font-size:1.05rem;
+    color:var(--ink);
+  }
+  .role-meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--sage);
+  }
+  ul.role-list{
+    margin:0;
+    padding-left:20px;
+  }
+  ul.role-list li{
+    margin-bottom:9px;
+    color:var(--ink-soft);
+  }
+  ul.role-list li::marker{color:var(--gold);}
+
+  /* ---------- RESEARCH ---------- */
+  .paper-block{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:26px 26px 22px;
+    margin-bottom:22px;
+  }
+  .paper-title{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.18rem;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+  .paper-meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--gold);
+    margin-bottom:16px;
+    display:block;
+  }
+  .stat-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:22px;
+    margin:18px 0 4px;
+    padding-top:16px;
+    border-top:1px dashed var(--line);
+  }
+  .stat{
+    min-width:130px;
+  }
+  .stat b{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.3rem;
+    color:var(--rust);
+    font-weight:500;
+  }
+  .stat span{
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .proj-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .proj-card{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:20px 22px;
+    transition:border-color 0.15s ease, transform 0.15s ease;
+  }
+  .proj-card:hover{
+    border-color:var(--gold);
+    transform:translateY(-2px);
+  }
+  .proj-name{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    font-weight:500;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+  .proj-name .arrow{color:var(--gold); margin-left:6px;}
+  .proj-desc{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  /* ---------- EDUCATION / SKILLS ---------- */
+  .cols2{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+  @media (min-width:620px){
+    .cols2{grid-template-columns:1fr 1fr;}
+  }
+  .tag-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:6px;
+  }
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    padding:5px 10px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:2px;
+    color:var(--ink-soft);
+  }
+  h3.mini{
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--sage);
+    margin:0 0 10px;
+    font-weight:600;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact-links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-top:8px;
+  }
+  .contact-links a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:15px;
+    text-decoration:none;
+    color:var(--ink);
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+  }
+  .contact-links a:hover{color:var(--rust);}
+  .contact-links .label{
+    color:var(--sage);
+    font-size:12px;
+    width:76px;
+    flex-shrink:0;
+  }
+
+  footer{
+    padding:36px 0 60px;
+    text-align:center;
+  }
+  footer p{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--sage);
+    margin:0;
+  }
+
+  @media (max-width:520px){
+    .hero{padding:64px 0 44px;}
+    section{padding:40px 0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" style="border-top:none; padding-top:64px;">
+    <p class="eyebrow">Awka, Anambra State, Nigeria</p>
+    <h1 class="name">Miracle Chimeremeze Nmegwa</h1>
+    <p class="tagline">I study how institutions and investment shape opportunity across Nigeria's states — and spend most of my time making sure the underlying numbers are right before anyone builds a decision on them.</p>
+    <p class="role-line">Analyst, Anambra State Public Private Partnership Agency (ANSIPPA) — PPP evaluation, investor aftercare, and project finance appraisal</p>
+
+    <div id="grid-signature" class="grid-signature" aria-hidden="true"></div>
+    <p class="grid-caption">37 cells, <b>one per Nigerian state + FCT</b> — an illustrative echo of the spatial inequality patterns explored in the research below, not literal data.</p>
+
+    <div class="cta-row" style="margin-top:36px;">
+      <a class="btn primary" href="#research">Read the research</a>
+      <a class="btn" href="#experience">See the policy work</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="profile">
+    <div class="sec-head"><span class="sec-code">§1</span><h2>Profile</h2></div>
+    <p class="lede">I'm an economist working at the intersection of public investment and institutional analysis — evaluating public-private partnership proposals by day, and running spatial econometrics on regional inequality by night. My thinking leans institutionalist: I'm more interested in <em>why</em> some regions capture the gains from infrastructure and digital investment while others don't, than in growth numbers alone.</p>
+    <p class="lede">I graduated in Economics from Nnamdi Azikiwe University, Awka, finishing in the top tier of my cohort (CGPA 3.80). I'm fluent in English and Igbo, conversational in Spanish (B1), and currently working toward French.</p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-head"><span class="sec-code">§2</span><h2>Experience</h2></div>
+
+    <div class="role">
+      <div class="role-top">
+        <span class="role-title">Analyst — ANSIPPA</span>
+        <span class="role-meta">Anambra State Public Private Partnership Agency · Current</span>
+      </div>
+      <ul class="role-list">
+        <li>Evaluate PPP and private investment proposals and maintain the agency's live database of investment projects.</li>
+        <li>Co-developed the state's <strong>Project Facilitation Fund Framework</strong>, setting out how facilitation support is structured and disbursed.</li>
+        <li>Authored the <strong>Investor Aftercare and Retention Strategy</strong> — a tiered engagement model with reconciled KPIs and phased jobs targets, built to keep investors engaged well past the ribbon-cutting.</li>
+        <li>Built a branded <strong>2026 Action Plan</strong> sequencing projects into Tier 1 and Tier 2, with an MDA coordination map and tiered KPIs.</li>
+        <li>Supporting the agency's evaluation and handover work as ANSIPPA transitions into <strong>ADIC</strong> (the Anambra Development and Investment Corporation).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="sec-head"><span class="sec-code">§3</span><h2>Research</h2></div>
+    <p class="lede">My current research asks a deceptively simple question: does digital adoption spread opportunity across Nigeria's regions, or does it concentrate further where capacity already exists?</p>
+
+    <div class="paper-block">
+      <span class="paper-meta">Nigerian Economic Society (NES) Conference Paper — with an academic mentor</span>
+      <div class="paper-title">Does Digitalisation Equalise or Stratify? Digital Adoption and Regional Inequality Dynamics in Nigeria</div>
+      <p style="margin-bottom:0; color:var(--ink-soft);">Built a 37-state × 12-year panel dataset and ran a full spatial panel econometric analysis in R. Along the way: redefined the Digital Adoption Index around broadband penetration after a PCA collapse from near-perfect collinearity, retained only the fiscal-capacity interaction term after two others failed to survive, and worked through several data-quality corrections — misspelled state names, incorrect survey variable codes, an IGR double-counting bug, and a population-vintage discontinuity — before trusting the results.</p>
+      <div class="stat-row">
+        <div class="stat"><b>37 × 12</b><span>states × years, panel dataset</span></div>
+        <div class="stat"><b>0.61–0.73</b><span>spatial autocorrelation (λ), night-lights</span></div>
+        <div class="stat"><b>R</b><span>spatial panel econometrics</span></div>
+      </div>
+    </div>
+    <p class="lede" style="font-size:14.5px;">The most robust finding so far: regional inequality in Nigeria isn't scattered — it clusters geographically and persists, which is exactly what that spatial autocorrelation coefficient is picking up.</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-head"><span class="sec-code">§4</span><h2>Data &amp; Analytics Work</h2></div>
+    <p class="lede">Applied analytics projects — the kind of end-to-end data work that sits behind the policy writing.</p>
+    <div class="proj-grid">
+      <a class="proj-card" href="https://github.com/miracle-nmegwa/adidas-sales-analysis" target="_blank" rel="noopener">
+        <div class="proj-name">adidas-sales-analysis <span class="arrow">→</span></div>
+        <p class="proj-desc">Comprehensive analysis of Adidas sales performance, with forecasting and advanced analytics in a Jupyter notebook.</p>
+      </a>
+      <a class="proj-card" href="https://github.com/miracle-nmegwa/cyclistic-bike-share-analysis" target="_blank" rel="noopener">
+        <div class="proj-name">cyclistic-bike-share-analysis <span class="arrow">→</span></div>
+        <p class="proj-desc">Google Data Analytics Capstone — analyzing bike-share usage patterns to convert casual riders into members.</p>
+      </a>
+      <a class="proj-card" href="https://github.com/miracle-nmegwa/superstore-sales-analysis" target="_blank" rel="noopener">
+        <div class="proj-name">superstore-sales-analysis <span class="arrow">→</span></div>
+        <p class="proj-desc">Interactive Excel dashboard for retail sales analytics — KPIs, geographic breakdowns, and business intelligence.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- EDUCATION & SKILLS -->
+  <section id="skills">
+    <div class="sec-head"><span class="sec-code">§5</span><h2>Education &amp; Skills</h2></div>
+    <div class="cols2">
+      <div>
+        <h3 class="mini">Education</h3>
+        <p style="margin-bottom:4px; font-weight:600;">B.Sc. Economics</p>
+        <p class="lede" style="margin-bottom:0;">Nnamdi Azikiwe University, Awka — CGPA 3.80, top of cohort</p>
+      </div>
+      <div>
+        <h3 class="mini">Certifications</h3>
+        <p class="lede" style="margin-bottom:0;">McKinsey Forward Program (2024) · Google Data Analytics (2022) · Financial Modeling Foundations (2022)</p>
+      </div>
+    </div>
+    <div style="margin-top:30px;">
+      <h3 class="mini">Tools &amp; Methods</h3>
+      <div class="tag-row">
+        <span class="tag">R</span>
+        <span class="tag">Stata</span>
+        <span class="tag">EViews</span>
+        <span class="tag">SPSS</span>
+        <span class="tag">Python</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Advanced Excel</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Spatial Econometrics</span>
+        <span class="tag">Policy Analysis</span>
+      </div>
+    </div>
+    <div style="margin-top:26px;">
+      <h3 class="mini">Languages</h3>
+      <div class="tag-row">
+        <span class="tag">English — fluent</span>
+        <span class="tag">Igbo — fluent</span>
+        <span class="tag">Spanish — B1</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="sec-head"><span class="sec-code">§6</span><h2>Contact</h2></div>
+    <p class="lede">Open to conversations on PPP structuring, investment research, spatial/regional economics, or graduate and research opportunities in development economics.</p>
+    <div class="contact-links">
+      <a href="mailto:nmegwamiracle@gmail.com"><span class="label">EMAIL</span> nmegwamiracle@gmail.com</a>
+      <a href="https://www.linkedin.com/in/miracle-nmegwa" target="_blank" rel="noopener"><span class="label">LINKEDIN</span> linkedin.com/in/miracle-nmegwa</a>
+      <a href="https://github.com/miracle-nmegwa" target="_blank" rel="noopener"><span class="label">GITHUB</span> github.com/miracle-nmegwa</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>MIRACLE CHIMEREMEZE NMEGWA — AWKA, NIGERIA — UPDATED 2026</p>
+  </footer>
+
+</div>
+
+<script>
+  // Signature grid: 37 cells representing states + FCT, illustrative variation only
+  (function(){
+    var grid = document.getElementById('grid-signature');
+    var n = 37;
+    // seeded pseudo-random pattern so it's stable across reloads but not uniform
+    var seed = 42;
+    function rand(){
+      seed = (seed * 9301 + 49297) % 233280;
+      return seed / 233280;
+    }
+    var colors = ['#8C9484', '#B8863B', '#A8462F'];
+    for(var i=0;i<n;i++){
+      var cell = document.createElement('div');
+      cell.className = 'cell';
+      var r = rand();
+      var heightPct = 30 + r*70;
+      var colorIdx = r < 0.55 ? 0 : (r < 0.85 ? 1 : 2);
+      var opacity = 0.35 + r*0.65;
+      cell.style.background = colors[colorIdx];
+      cell.style.height = heightPct + '%';
+      cell.style.alignSelf = 'flex-end';
+      cell.style.setProperty('--target-op', opacity.toFixed(2));
+      cell.style.animationDelay = (i * 18) + 'ms';
+      grid.appendChild(cell);
+    }
+    grid.style.display = 'flex';
+    grid.style.alignItems = 'flex-end';
+  })();
+</script>
+
+</body>
+</html>
